@@ -11,7 +11,7 @@ let city = document.getElementById('city')
 let temp = document.getElementById('temp')
 let Cname = document.getElementById('name')
 let wind = document.getElementById('wind')
-let pres = document.getElementById('pres')
+let pres = document.getElementById('perc')
 let hum = document.getElementById('hum')
 let img = document.getElementById('icon')
 
@@ -19,7 +19,7 @@ let img = document.getElementById('icon')
 // Function to get current weather based on user's location
 function getCurrent() {
     navigator.geolocation.getCurrentPosition(async (result) =>{
-        // console.log(result);
+        console.log(result);
         // Retrieve latitude and longitude from the geolocation result
         const l = result.coords
         lon = l.longitude
@@ -32,7 +32,7 @@ function getCurrent() {
         if (data.status == 200) {
                                                                                 // console.log(await data.json());
             const info = await data.json();
-                                                                                // console.log(info);
+                                                                                console.log(info);
 
             // Update HTML elements with weather information
             Cname.innerHTML = info.name

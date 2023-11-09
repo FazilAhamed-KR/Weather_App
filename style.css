@@ -1,22 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300&display=swap");
 
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-image: linear-gradient(orange red);
+body {
+  background-image: linear-gradient(orange, red);
+  font-family: 'Poppins', sans-serif; /* Apply the imported font to the entire body */
 }
 
+section.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
 
-.card{
-color: white;
-    background: skyblue;
-     border-radius: 20px;
-     border-width: 0;
-    width: 60px;
-    height: 600px;
+.search,
+.card {
+  width: 100%;
+  max-width: 400px;
+}
+
+.card {
+  color: white;
+  background: skyblue;
+  border-radius: 20px;
+  height: auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow for better visibility */
+}
+
+@media (max-width: 867px) {
+  section.hero {
+    flex-direction: column;
+  }
+
+  .search,
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .search,
+  .card {
+    max-width: none;
+  }
 }
