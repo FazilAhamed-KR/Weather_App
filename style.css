@@ -7,8 +7,8 @@
 }
 
 body {
-  background-image: linear-gradient(orange, red);
-  font-family: 'Poppins', sans-serif; /* Apply the imported font to the entire body */
+  /* background-image: linear-gradient(orange, red); */
+  font-family: 'Poppins', sans-serif;
 }
 
 section.hero {
@@ -16,10 +16,12 @@ section.hero {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* Set a minimum height for the section */
 }
 
-.search,
+.search{
+    min-height: 1px;
+}
 .card {
   width: 100%;
   max-width: 400px;
@@ -29,19 +31,19 @@ section.hero {
   color: white;
   background: skyblue;
   border-radius: 20px;
-  height: auto;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow for better visibility */
+  height: auto; 
+  /* padding: 20px; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 867px) {
+@media (max-width: 768px) {
   section.hero {
     flex-direction: column;
   }
 
   .search,
   .card {
-    margin-bottom: 20px;
+     margin-bottom: 20px;
   }
 }
 
@@ -50,4 +52,11 @@ section.hero {
   .card {
     max-width: none;
   }
+}
+
+@media (max-width: 355px){
+    .search,
+    .card{
+        max-width: none;
+    }
 }
